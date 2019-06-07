@@ -46,17 +46,55 @@
             </objects>
             <point key="canvasLocation" x="1262.3188405797102" y="140.625"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Song View Controller-->
         <scene sceneID="373-ae-wy0">
             <objects>
-                <viewController id="cpJ-rN-aM0" sceneMemberID="viewController">
+                <viewController id="cpJ-rN-aM0" customClass="AddSongViewController" customModule="FavoriteMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jhq-e0-mGa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="AJ5-Pa-0Li">
+                                <rect key="frame" x="16" y="156" width="382" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LcC-sB-1X8">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song Genre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nra-bU-0Lo">
+                                        <rect key="frame" x="0.0" y="46" width="382" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqP-tO-9gh">
+                                        <rect key="frame" x="0.0" y="92" width="382" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Add Song">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addSongTapped:" destination="cpJ-rN-aM0" eventType="touchUpInside" id="Gpy-Rc-Lfi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t1X-vN-IVA" firstAttribute="trailing" secondItem="AJ5-Pa-0Li" secondAttribute="trailing" constant="16" id="WHB-Qt-y8a"/>
+                            <constraint firstItem="AJ5-Pa-0Li" firstAttribute="leading" secondItem="t1X-vN-IVA" secondAttribute="leading" constant="16" id="cFa-pN-PSb"/>
+                            <constraint firstItem="AJ5-Pa-0Li" firstAttribute="top" secondItem="t1X-vN-IVA" secondAttribute="top" constant="16" id="uf4-Xc-PrD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="t1X-vN-IVA"/>
                     </view>
+                    <connections>
+                        <outlet property="songGenreTextField" destination="Nra-bU-0Lo" id="xzE-Bb-tLg"/>
+                        <outlet property="songNameTextField" destination="LcC-sB-1X8" id="b9y-ts-N5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xtG-Wu-fjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

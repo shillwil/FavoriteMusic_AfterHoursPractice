@@ -14,6 +14,7 @@
 		A2F9E77122A9F7CA00DBE104 /* MusicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9E77022A9F7CA00DBE104 /* MusicTableViewController.swift */; };
 		A2F9E77322A9F91900DBE104 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9E77222A9F91900DBE104 /* Song.swift */; };
 		A2F9E77522A9F99800DBE104 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9E77422A9F99800DBE104 /* SongController.swift */; };
+		A2F9E77A22A9FC3500DBE104 /* AddSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F9E77922A9FC3500DBE104 /* AddSongViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A2F9E77022A9F7CA00DBE104 /* MusicTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewController.swift; sourceTree = "<group>"; };
 		A2F9E77222A9F91900DBE104 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		A2F9E77422A9F99800DBE104 /* SongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
+		A2F9E77922A9FC3500DBE104 /* AddSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		A2F9E77822A9FA6F00DBE104 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A2F9E77922A9FC3500DBE104 /* AddSongViewController.swift */,
 				A2F9E77022A9F7CA00DBE104 /* MusicTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -168,6 +171,7 @@
 				A2F9E77322A9F91900DBE104 /* Song.swift in Sources */,
 				A2F9E75F22A9F63900DBE104 /* AppDelegate.swift in Sources */,
 				A2F9E77522A9F99800DBE104 /* SongController.swift in Sources */,
+				A2F9E77A22A9FC3500DBE104 /* AddSongViewController.swift in Sources */,
 				A2F9E77122A9F7CA00DBE104 /* MusicTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
