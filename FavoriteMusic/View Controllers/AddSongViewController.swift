@@ -28,6 +28,8 @@ class AddSongViewController: UIViewController {
         let songGenre = songGenreTextField.text else { return }
         
         songController.createSong(title: songName, genre: songGenre)
+        
+        navigationController?.popViewController(animated: true)
     }
     
 
