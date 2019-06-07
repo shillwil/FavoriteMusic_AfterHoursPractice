@@ -9,6 +9,8 @@
 import UIKit
 
 class AddSongViewController: UIViewController {
+    
+    var songController: SongController?
 
     @IBOutlet weak var songNameTextField: UITextField!
     @IBOutlet weak var songGenreTextField: UITextField!
@@ -21,6 +23,11 @@ class AddSongViewController: UIViewController {
     }
     
     @IBAction func addSongTapped(_ sender: Any) {
+        guard let songController = songController,
+        let songName = songNameTextField.text,
+        let songGenre = songGenreTextField.text else { return }
+        
+        songController.createSong(title: songName, genre: songGenre)
     }
     
 
