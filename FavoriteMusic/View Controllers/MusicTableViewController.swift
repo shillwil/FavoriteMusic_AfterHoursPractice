@@ -8,7 +8,11 @@
 
 import UIKit
 
-class MusicTableViewController: UITableViewController {
+class MusicTableViewController: UITableViewController, AddSongDelegate {
+    func addSongTapped() {
+        tableView.reloadData()
+    }
+    
     
     var songController = SongController()
 
@@ -16,11 +20,11 @@ class MusicTableViewController: UITableViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        tableView.reloadData()
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//        tableView.reloadData()
+//    }
 
     // MARK: - Table view data source
 
@@ -45,8 +49,8 @@ class MusicTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NewSongSegue" {
             guard let destinationVC = segue.destination as? AddSongViewController else { return }
-            
             destinationVC.songController = songController
+            destinationVC.delegate = self
         }
     }
     
